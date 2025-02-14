@@ -1,0 +1,136 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2821
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="it">\
+<head>\
+    <meta charset="UTF-8">\
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <title>Biglietto di San Valentino</title>\
+    <style>\
+        body \{\
+            font-family: 'Arial', sans-serif;\
+            background-color: #ffeff6;\
+            margin: 0;\
+            padding: 0;\
+            display: flex;\
+            justify-content: center;\
+            align-items: center;\
+            height: 100vh;\
+            overflow: hidden;\
+        \}\
+\
+        .container \{\
+            text-align: center;\
+            position: relative;\
+        \}\
+\
+        .heart \{\
+            position: absolute;\
+            font-size: 40px;\
+            color: red;\
+            animation: moveHeart 3s infinite;\
+        \}\
+\
+        @keyframes moveHeart \{\
+            0% \{ transform: translateY(0); \}\
+            50% \{ transform: translateY(-20px); \}\
+            100% \{ transform: translateY(0); \}\
+        \}\
+\
+        .message \{\
+            font-size: 24px;\
+            color: #d84a6a;\
+            margin-top: 20px;\
+            font-weight: bold;\
+        \}\
+\
+        .photo \{\
+            margin-top: 20px;\
+            border-radius: 50%;\
+            overflow: hidden;\
+        \}\
+\
+        .photo img \{\
+            width: 200px;\
+            height: 200px;\
+            object-fit: cover;\
+        \}\
+\
+        .surprise \{\
+            margin-top: 30px;\
+            padding: 10px 20px;\
+            background-color: #ff6f91;\
+            color: white;\
+            border: none;\
+            border-radius: 5px;\
+            cursor: pointer;\
+        \}\
+\
+        .surprise:hover \{\
+            background-color: #ff2a61;\
+        \}\
+\
+        .hiddenMessage \{\
+            display: none;\
+            font-size: 20px;\
+            color: #d84a6a;\
+            margin-top: 20px;\
+        \}\
+\
+        .heartAnimation \{\
+            display: none;\
+            font-size: 60px;\
+            animation: heartBeat 1s infinite;\
+        \}\
+\
+        @keyframes heartBeat \{\
+            0% \{ transform: scale(1); \}\
+            50% \{ transform: scale(1.2); \}\
+            100% \{ transform: scale(1); \}\
+        \}\
+    </style>\
+</head>\
+<body>\
+    <div class="container">\
+        <!-- Foto -->\
+        <div class="photo">\
+            <img src="https://i.ibb.co/Ld158J4P/IMG-2207.jpg" alt="Roxy e te">\
+        </div>\
+\
+        <!-- Cuori animati -->\
+        <div class="heart" style="top: 10%; left: 10%;">\uc0\u10084 \u65039 </div>\
+        <div class="heart" style="top: 20%; left: 80%;">\uc0\u10084 \u65039 </div>\
+        <div class="heart" style="top: 40%; left: 40%;">\uc0\u10084 \u65039 </div>\
+\
+        <!-- Messaggio -->\
+        <div class="message">\
+            \uc0\u1051 \u1102 \u1073 \u1086 \u1074  \u1084 \u1086 \u1103 , \u1090 \u1080  - \u1084 \u1086 \u1108  \u1089 \u1086 \u1085 \u1094 \u1077 , \u1084 \u1086 \u1108  \u1089 \u1077 \u1088 \u1094 \u1077 , \u1084 \u1086 \u1108  \u1074 \u1089 \u1077 . \u1047  \u1082 \u1086 \u1078 \u1085 \u1080 \u1084  \u1076 \u1085 \u1077 \u1084  \u1103  \u1074 \u1089 \u1077  \u1073 \u1110 \u1083 \u1100 \u1096 \u1077  \u1074 \u1076 \u1103 \u1095 \u1085 \u1080 \u1081  \u1076 \u1086 \u1083 \u1110  \u1079 \u1072  \u1090 \u1077 \u1073 \u1077 . \u1047  \u1044 \u1085 \u1077 \u1084  \u1057 \u1074 \u1103 \u1090 \u1086 \u1075 \u1086  \u1042 \u1072 \u1083 \u1077 \u1085 \u1090 \u1080 \u1085 \u1072 !\
+        </div>\
+\
+        <!-- Pulsante sorpresa -->\
+        <button class="surprise" onclick="showSurprise()">\uc0\u1053 \u1072 \u1090 \u1080 \u1089 \u1085 \u1080  \u1076 \u1083 \u1103  \u1089 \u1102 \u1088 \u1087 \u1088 \u1080 \u1079 \u1091 !</button>\
+\
+        <!-- Messaggio nascosto -->\
+        <div class="hiddenMessage" id="hiddenMessage">\
+            \uc0\u55357 \u56470  \u1058 \u1080  - \u1085 \u1072 \u1081 \u1082 \u1088 \u1072 \u1097 \u1077 , \u1097 \u1086  \u1089 \u1090 \u1072 \u1083 \u1086 \u1089 \u1103  \u1074  \u1084 \u1086 \u1108 \u1084 \u1091  \u1078 \u1080 \u1090 \u1090 \u1110 ! \u55357 \u56470 \
+        </div>\
+\
+        <!-- Animazione cuore -->\
+        <div class="heartAnimation" id="heartAnimation">\uc0\u10084 \u65039 </div>\
+    </div>\
+\
+    <script>\
+        // Funzione per mostrare il messaggio nascosto\
+        function showSurprise() \{\
+            document.getElementById("hiddenMessage").style.display = "block";\
+            document.getElementById("heartAnimation").style.display = "block";\
+        \}\
+    </script>\
+</body>\
+</html>\
+}
